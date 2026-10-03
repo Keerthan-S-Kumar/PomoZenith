@@ -2,7 +2,7 @@
 
 A Pomodoro focus app whose background comes alive with the sound you play: rainfall with lightning, ocean waves under a moon, windy meadow with tumbling leaves, or a warp-speed starfield.
 
-**Live demo:** https://YOUR-USERNAME.github.io/pomozenith/
+**Live demo:** https://keerthan-s-kumar.github.io/pomozenith/
 
 ## Features
 - Focus / short / long break timer with adjustable durations, glowing ring and orbiting dot
