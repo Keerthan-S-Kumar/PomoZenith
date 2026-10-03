@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PomoZenith — Focus Studio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bgl on" data-s="space"></div><div class="bgl" data-s="rain"></div><div class="bgl" data-s="waves"></div><div class="bgl" data-s="wind"></div><canvas id="sky"></canvas><canvas id="cf"></canvas><div id="fl"></div><div id="glow"></div>
+<nav><a class="logo" href="#">PomoZenith<i>.</i></a><div style="display:flex;gap:8px"><button class="ic" id="zn" aria-label="Zen mode" title="Zen mode (Esc to exit)">🧘</button><button class="ic" id="th" aria-label="Toggle theme">🌓</button></div></nav>
+<main>
+  <div class="hd"><div class="scene"><span id="sce">🌌</span><span>Scene · <b id="scn">Deep space</b></span></div><h1>Find your <span class="grad">flow.</span></h1><p>A focus studio with a Pomodoro timer, ambient sounds, tasks and stats.</p></div>
+  <div class="app">
+    <div class="col">
+      <div class="card tilt" id="tc">
+        <div class="tabs" id="tabs"><button class="tab on" data-m="focus">Focus</button><button class="tab" data-m="short">Short break</button><button class="tab" data-m="long">Long break</button></div>
+        <div class="dur"><button id="dm" aria-label="Shorter">−</button><span id="dv">25 min</span><button id="dp" aria-label="Longer">+</button></div>
+        <div class="clock" id="clock">
+          <svg viewBox="0 0 300 300"><defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--b)"/><stop offset=".5" style="stop-color:var(--a)"/><stop offset="1" style="stop-color:var(--c)"/></linearGradient></defs>
+            <circle class="trk" cx="150" cy="150" r="125"/><circle class="prg" id="pr" cx="150" cy="150" r="125"/><g id="dg"><circle class="dot" cx="150" cy="25" r="9"/></g></svg>
+          <div class="ct"><div class="tm" id="tm">25:00</div><div class="lb" id="lb">Ready to focus</div></div>
+        </div>
+        <div class="dots" id="dots"></div>
+        <div class="ctl"><button class="btn magnet" id="go">Start</button><button class="btn g magnet" id="rs">Reset</button></div>
+        <p class="hint">Press <b>Space</b> to start / pause</p>
+      </div>
+      <div class="card"><h3>Last 7 days</h3><div class="st"><div><b id="s1">0</b><span>Sessions today</span></div><div><b id="s2">0</b><span>Focus minutes today</span></div></div><div class="bars" id="bars"></div></div>
+    </div>
+    <div class="col">
+      <div class="card"><h3>Tasks</h3>
+        <form class="add" id="tf"><input id="ti" placeholder="What are you working on?" maxlength="60" aria-label="New task"><button class="btn magnet" type="submit">Add</button></form>
+        <div id="tl"></div></div>
+      <div class="card"><h3>Ambient sounds</h3>
+        <div class="snd" id="snd"><div class="sc" data-k="rain"><span>🌧️</span>Rain<input type="range" min="0" max="100" value="60" aria-label="Rain volume"></div><div class="sc" data-k="waves"><span>🌊</span>Waves<input type="range" min="0" max="100" value="60" aria-label="Waves volume"></div><div class="sc" data-k="wind"><span>🍃</span>Wind<input type="range" min="0" max="100" value="60" aria-label="Wind volume"></div></div>
+        <input type="range" id="vol" min="0" max="100" value="50" aria-label="Volume"></div>
+    </div>
+  </div>
+</main>
+<div id="toast"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
